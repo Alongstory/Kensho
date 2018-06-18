@@ -49,5 +49,5 @@ class Crawler:
             rlist.append([s])
             myWriter.writerows(rlist)
             #f.write(s)
-            print(rlist)
+        print(rlist)
         f.close()
