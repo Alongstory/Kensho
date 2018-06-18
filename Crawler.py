@@ -28,7 +28,7 @@ class Crawler:
 
     def crawl(self):
         service = build("customsearch", "v1",
-                        developerKey="AIzaSyC1o8pJAwMvaRugaRp9nWtvrGQs2_llEps")
+                        developerKey = "AIzaSyC1o8pJAwMvaRugaRp9nWtvrGQs2_llEps")
 
         res = service.cse().list(
             q = self.item,
@@ -37,3 +37,4 @@ class Crawler:
             num = self.num,
         ).execute()
         pprint.pprint(res)
+
