@@ -3,6 +3,7 @@ Command-line application that does a search.
 """
 import pprint
 from googleapiclient.discovery import build
+import csv
 
 
 class Crawler:
@@ -37,3 +38,16 @@ class Crawler:
             num = self.num,
         ).execute()
         pprint.pprint(res)
+
+        f = open("/Users/wangyizhen/Desktop/Third_Week/618.csv", "w+")
+        myWriter = csv.writer(f, delimiter=',')
+
+        rlist = []
+        for i in range(len(res['items'])):
+            s = res['items'][i]['snippet'].replace('\n', '')
+            #print(s)
+            rlist.append([s])
+            myWriter.writerows(rlist)
+            #f.write(s)
+            print(rlist)
+        f.close()
