@@ -21,7 +21,7 @@ class Crawler:
         # to get an API key for your own application.
     """
 
-    def __init__(self, item, num = 10, key = '005808576341306023160:yojc6z7o63u'):
+    def __init__(self, item, key, num = 10):
         self.item = item
         self.key = key
         self.num = num
