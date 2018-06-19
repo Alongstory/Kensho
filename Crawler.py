@@ -39,7 +39,7 @@ class Crawler:
         ).execute()
         pprint.pprint(res)
 
-        f = open("/Users/wangyizhen/Desktop/Third_Week/618.csv", "w+")
+        f = open("dataCrawl.csv", "w+")
         myWriter = csv.writer(f, delimiter=',')
 
         rlist = []
