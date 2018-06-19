@@ -33,7 +33,9 @@ class Crawler:
                         developerKey="AIzaSyC1o8pJAwMvaRugaRp9nWtvrGQs2_llEps")
         # test 1
         print('loop_num: ', loop_num)
-        f = open("dataCrawl.csv", "w+")
+
+        #
+        f = open(self.item + ".csv", "w+")
         for i in range(loop_num):
             print(i)
             res = service.cse().list(

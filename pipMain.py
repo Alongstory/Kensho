@@ -1,5 +1,7 @@
 from Crawler import Crawler
 import argparse
+import os
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = 'Process Parameters for searching')
