@@ -34,7 +34,6 @@ class Crawler:
         res = service.cse().list(
             q = self.item,
             cx = self.key,
-            #'005808576341306023160:yojc6z7o63u'
             num = self.num,
         ).execute()
         pprint.pprint(res)
