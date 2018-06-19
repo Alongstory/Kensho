@@ -11,7 +11,7 @@ if __name__ == '__main__':
     #parser.add_argument()
     args = parser.parse_args()
 
-    spider = Crawler(args.search, args.key)
-    spider.crawl(args.num)
+    spider = Crawler(args.key)
+    spider.crawl(args.search, args.num)
     #print(args.num)
 
