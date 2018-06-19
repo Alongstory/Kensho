@@ -39,15 +39,15 @@ class Crawler:
         ).execute()
         pprint.pprint(res)
 
-        f = open("/Users/wangyizhen/Desktop/Third_Week/618.csv", "w+")
-        myWriter = csv.writer(f, delimiter=',')
+        # the path here should be modified
+        with open("/Users/wangyizhen/Desktop/Third_Week/618.csv", "w+") as f:
+            myWriter = csv.writer(f, delimiter = ',')
+            rlist = []
+            for i in range(len(res['items'])):
+                s = res['items'][i]['snippet'].replace('\n', '')
+                #print(s)
+                rlist.append([s])
+                myWriter.writerows(rlist)
+                #f.write(s)
+                print(rlist)
 
-        rlist = []
-        for i in range(len(res['items'])):
-            s = res['items'][i]['snippet'].replace('\n', '')
-            #print(s)
-            rlist.append([s])
-            myWriter.writerows(rlist)
-            #f.write(s)
-            print(rlist)
-        f.close()

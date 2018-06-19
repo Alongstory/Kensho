@@ -1,2 +1,2 @@
 # Kensho
-The public folder of Kensho
+The public folder of
