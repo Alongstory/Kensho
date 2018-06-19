@@ -31,21 +31,27 @@ class Crawler:
         loop_num = times // 10 + 1
         service = build("customsearch", "v1",
                         developerKey="AIzaSyC1o8pJAwMvaRugaRp9nWtvrGQs2_llEps")
+        # test 1
+        print('loop_num: ', loop_num)
+        f = open("dataCrawl.csv", "w+")
         for i in range(loop_num):
+            print(i)
             res = service.cse().list(
                 q = self.item,
                 cx = self.key,
                 num = self.num,
-                lowRange = (i - 1) * 10
+                lowRange = (i + 1) * 10
             ).execute()
             # save the returned
-            with open("dataCrawl.csv", "w+") as f:
-                myWriter = csv.writer(f, delimiter = ',')
-                rlist = []
-                for i in range(len(res['items'])):
-                    s = res['items'][i]['snippet'].replace('\n', '')
-                    #print(s)
-                    rlist.append([s])
-                    myWriter.writerows(rlist)
-                    #f.write(s)
-                #print(rlist)
+
+            myWriter = csv.writer(f, delimiter = ',')
+            rlist = []
+            for i in range(len(res['items'])):
+                s = res['items'][i]['snippet'].replace('\n', '')
+                # test 2
+                #print(len(res['items']))
+                rlist.append([s])
+                myWriter.writerows(rlist)
+                #f.write(s)
+            #print(rlist)
+        f.close()
