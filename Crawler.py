@@ -38,15 +38,13 @@ class Crawler:
         ).execute()
         pprint.pprint(res)
 
-        f = open("dataCrawl.csv", "w+")
-        myWriter = csv.writer(f, delimiter=',')
-
-        rlist = []
-        for i in range(len(res['items'])):
-            s = res['items'][i]['snippet'].replace('\n', '')
-            #print(s)
-            rlist.append([s])
-            myWriter.writerows(rlist)
-            #f.write(s)
-        print(rlist)
-        f.close()
+        with open("dataCrawl.csv", "w+") as f:
+            myWriter = csv.writer(f, delimiter=',')
+            rlist = []
+            for i in range(len(res['items'])):
+                s = res['items'][i]['snippet'].replace('\n', '')
+                #print(s)
+                rlist.append([s])
+                myWriter.writerows(rlist)
+                #f.write(s)
+            print(rlist)
