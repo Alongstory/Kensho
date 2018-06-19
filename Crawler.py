@@ -51,7 +51,7 @@ class Crawler:
                 # test 2
                 #print(len(res['items']))
                 rlist.append([s])
-                myWriter.writerows(rlist)
+            myWriter.writerows(rlist)
                 #f.write(s)
             #print(rlist)
         f.close()
