@@ -4,6 +4,13 @@ Command-line application that does a search.
 import pprint
 from googleapiclient.discovery import build
 import csv
+import os
+
+
+def mkdir():
+    pass
+
+
 
 
 class Crawler:
@@ -26,28 +33,28 @@ class Crawler:
         self.num = num
 
 
-    def crawl(self, search_item, times):
+    def crawl(self, search_item, search_keywords, times):
         loop_num = times // 10 + 1
         service = build("customsearch", "v1",
                         developerKey="AIzaSyC1o8pJAwMvaRugaRp9nWtvrGQs2_llEps")
         # test 1
         print('loop_num: ', loop_num)
 
-        f = open(search_item + ".csv", "w+")
-        for i in range(loop_num):
-            print(i)
-            res = service.cse().list(
-                q = search_item,
-                cx = self.key,
-                num = self.num,
-                lowRange = (i + 1) * 10
-            ).execute()
+            f = open(search_item + ".csv", "w+")
+            for i in range(loop_num):
+                print(i)
+                res = service.cse().list(
+                    q = search_item,
+                    cx = self.key,
+                    num = self.num,
+                    lowRange = (i + 1) * 10
+                ).execute()
 
-            #start saving
-            myWriter = csv.writer(f, delimiter = ',')
-            rlist = []
-            for i in range(len(res['items'])):
-                s = res['items'][i]['snippet'].replace('\n', '')
-                rlist.append([s])
-            myWriter.writerows(rlist)
-        f.close()
+                #start saving
+                myWriter = csv.writer(f, delimiter = ',')
+                rlist = []
+                for i in range(len(res['items'])):
+                    s = res['items'][i]['snippet'].replace('\n', '')
+                    rlist.append([s])
+                myWriter.writerows(rlist)
+            f.close()
