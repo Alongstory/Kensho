@@ -7,10 +7,14 @@ import csv
 import os
 
 
-def mkdir():
-    pass
+def mkdir(path):
+    folder_exist = os.path.exists(path)
+    if not folder_exist:
+        os.mkdir(path)
+        print('Attention: new folder created')
 
-
+    else:
+        print('Folder existed, data will be stored later')
 
 
 class Crawler:
@@ -37,10 +41,14 @@ class Crawler:
         loop_num = times // 10 + 1
         service = build("customsearch", "v1",
                         developerKey="AIzaSyC1o8pJAwMvaRugaRp9nWtvrGQs2_llEps")
-        # test 1
+
         print('loop_num: ', loop_num)
 
-            f = open(search_item + ".csv", "w+")
+        # create store folder path
+        os.mkdir(search_item)
+
+        for items in search_keywords:
+            f = open(search_item + '/' + items + ".csv", "w+")
             for i in range(loop_num):
                 print(i)
                 res = service.cse().list(
