@@ -3,6 +3,7 @@ import argparse
 from EventClassifier import EventClassifier
 from QueryClassifier import QueryClassifier
 
+# TODO: if the input is a string which is not number, the error message doesn't comes out and loop ended
 
 def main():
     parser = argparse.ArgumentParser(description = 'Process Parameters for searching')
