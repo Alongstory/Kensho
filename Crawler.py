@@ -52,7 +52,7 @@ class Crawler:
             for i in range(loop_num):
                 print(i)
                 res = service.cse().list(
-                    q = search_item,
+                    q = items,
                     cx = self.key,
                     num = self.num,
                     lowRange = (i + 1) * 10

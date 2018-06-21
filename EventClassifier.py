@@ -1,0 +1,2 @@
+class EventClassifier:
+    pass
