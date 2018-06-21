@@ -1,5 +1,8 @@
 from Crawler import Crawler
 import argparse
+from EventClassifier import EventClassifier
+from QueryClassifier import QueryClassifier
+
 
 def main():
     parser = argparse.ArgumentParser(description = 'Process Parameters for searching')
@@ -17,7 +20,7 @@ def main():
             # create the crawler
             spider = Crawler(args.key)
             while True:
-                print('please enter the search item and keywords like this\n'
+                print('\nplease enter the search item and keywords like this\n'
                       'num_of_res item keyword_1 keyword_2 ... keyword_n\n')
                 cmd = input()
                 print(cmd)
@@ -41,22 +44,18 @@ def main():
         elif cmd == '2':
             print('Events classifier in developing...\n')
             continue
-
         elif cmd == '3':
             print('Query classifier in developing...\n')
             continue
         elif cmd == '4' or 'exit':
             break
-
         else:
             print('Command error, please input your option again\n')
+            continue
 
 
 if __name__ == '__main__':
     main()
-
-
-
 
     #print(args.num)
 
