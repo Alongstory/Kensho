@@ -1,5 +1,6 @@
 from Crawler import Crawler
 import argparse
+import os
 from EventClassifier import EventClassifier
 from QueryClassifier import QueryClassifier
 
@@ -11,18 +12,20 @@ def main():
     args = parser.parse_args()
     # command loop
     while True:
-        print('Please select a number option shows below:\n'
-              '1 Add new class data to events library\n'
+        print('1 Add new class data to events library\n'
               '2 Events classification\n'
               '3 Query classification\n'
-              '4 Exit\n')
+              '4 Exit\n'
+              'Please input a number:\n'
+              )
         cmd = input()
         if cmd == '1':
             # create the crawler
             spider = Crawler(args.key)
             while True:
                 print('\nplease enter the search item and keywords like this\n'
-                      'num_of_res item keyword_1 keyword_2 ... keyword_n\n')
+                      'num_of_res item keyword_1 keyword_2 ... keyword_n\n'
+                      "type 'exit' to exit\n")
                 cmd = input()
                 print(cmd)
                 # input check for cmd
@@ -57,6 +60,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-    #print(args.num)
-
