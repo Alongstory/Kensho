@@ -51,7 +51,7 @@ def main():
         elif cmd == '3':
             print('Query classifier in developing...\n')
             continue
-        elif cmd == '4' or 'exit':
+        elif cmd == '4' or cmd == 'exit':
             break
         else:
             print('Command error, please input your option again\n')
