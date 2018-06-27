@@ -37,7 +37,7 @@ class Crawler:
         self.num = num
 
 
-    def crawl(self, search_item, search_keywords, times):
+    def crawl(self, times, search_keywords, search_item):
         loop_num = eval(times) // 10 + 1
         service = build("customsearch", "v1",
                         developerKey="AIzaSyC1o8pJAwMvaRugaRp9nWtvrGQs2_llEps")
