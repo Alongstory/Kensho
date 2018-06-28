@@ -50,7 +50,7 @@ class Crawler:
         for items in search_keywords:
             f = open(search_item + '/' + items + ".csv", "w+")
             for i in range(loop_num):
-                print(i)
+                print('page' + i)
                 res = service.cse().list(
                     q = items,
                     cx = self.key,
