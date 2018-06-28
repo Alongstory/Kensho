@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d21a14b-55bb-4d28-a3ed-65ddb78ddeef" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EventClassifier.py" afterPath="$PROJECT_DIR$/EventClassifier.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QueryClassifier.py" afterPath="$PROJECT_DIR$/QueryClassifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pipMain.py" afterPath="$PROJECT_DIR$/pipMain.py" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipMain.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pipMain.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pipMain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
-              <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="234">
+              <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -40,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryClassifier.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QueryClassifier.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QueryClassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,8 +55,8 @@
       <file leaf-file-name="EventClassifier.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EventClassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,10 +87,10 @@
         <option value="$PROJECT_DIR$/dataCrawl.csv" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Query.py" />
-        <option value="$PROJECT_DIR$/EventClassifier.py" />
-        <option value="$PROJECT_DIR$/pipMain.py" />
         <option value="$PROJECT_DIR$/Crawler.py" />
         <option value="$PROJECT_DIR$/QueryClassifier.py" />
+        <option value="$PROJECT_DIR$/EventClassifier.py" />
+        <option value="$PROJECT_DIR$/pipMain.py" />
       </list>
     </option>
   </component>
@@ -371,29 +373,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pipMain.py">
+    <entry file="file://$PROJECT_DIR$/QueryClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EventClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QueryClassifier.py">
+    <entry file="file://$PROJECT_DIR$/pipMain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="234">
+          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

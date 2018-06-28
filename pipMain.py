@@ -4,8 +4,6 @@ import os
 from EventClassifier import EventClassifier
 from QueryClassifier import QueryClassifier
 
-# TODO: if the input is a string which is not number, the error message doesn't comes out and loop ended
-
 def main():
     parser = argparse.ArgumentParser(description = 'Process Parameters for searching')
     parser.add_argument('key', type = str, help= 'Input the keys of Google API')
@@ -16,18 +14,16 @@ def main():
               '2 Events classification\n'
               '3 Query classification\n'
               '4 Exit\n'
-              'Please input a number:\n'
               )
-        cmd = input()
+        cmd = input('Please input a option:\n')
         if cmd == '1':
             # create the crawler
             spider = Crawler(args.key)
             while True:
-                print('\nplease enter the search item and keywords like this\n'
+                print('\nEnter the search item and keywords like this\n'
                       'num_of_res item keyword_1 keyword_2 ... keyword_n\n'
-                      "type 'exit' to exit\n")
-                cmd = input()
-                print(cmd)
+                      "--- type 'exit' to exit ---\n")
+                cmd = input('Please input your command\n')
                 # input check for cmd
                 if cmd == '':
                     print('Empty string!')

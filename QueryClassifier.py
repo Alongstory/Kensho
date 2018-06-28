@@ -1,4 +1,5 @@
 class QueryClassifier:
     """
+
     """
     pass
